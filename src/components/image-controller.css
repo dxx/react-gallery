@@ -1,0 +1,43 @@
+/*
+ * 控制单元组件相关样式
+ */
+.controller-unit{
+	position: relative;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	margin-right: 10px;
+	border-radius: 22px;
+	background-color: #555555;
+	color: #FFFFFF;
+	vertical-align: middle;
+	font-size: 13px;
+	cursor: pointer;
+	-webkit-transition: background-color .6s ease-in-out, transform .6s ease-in-out;
+	transition: background-color .6s ease-in-out, transform .6s ease-in-out;
+}
+.controller-unit:hover{
+	background-color: #121212;
+}
+.controller-unit.current{
+	background-color: #121212;
+}
+.inverse-icon{
+	display: none;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 16px;
+	height: 16px;
+}
+.controller-unit.current span{
+	display: none;
+}
+.controller-unit.current .inverse-icon{
+	display: block;
+}
+.controller-unit.inverse{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
