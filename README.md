@@ -1,6 +1,7 @@
 ## Description
 
-This is a gallery application written by react
+This is a gallery application written by react.<br>
+It uses create-react-app to build.
 
 ## Project Structure
 
