@@ -92,10 +92,11 @@ class Gallery extends React.Component {
 		this.position.verticalPosition.center[1] = stageH / 2 - imageFigureH / 2 * 3;
 
 		//随机计算图片的位置
-		this.randomPosition(0);
+		this.allocationPosition(0);
 	}
-	randomPosition(index) {
-		let horizontalPosition = this.position.horizontalPosition,
+	allocationPosition(index) {
+		let centerPosition = this.position.centerPosition,
+		horizontalPosition = this.position.horizontalPosition,
 		verticalPosition = this.position.verticalPosition;
 
 		let positions = this.state.positions;
@@ -105,12 +106,11 @@ class Gallery extends React.Component {
 
 		//设置中心图片的位置
 		centerImageFigures[0] = {
-			left: this.position.centerPosition.left,
-			top: this.position.centerPosition.top,
+			left: centerPosition.left,
+			top: centerPosition.top,
 			rotate: 0,
 			center: true,
-			inverse: false,
-
+			inverse: false
 		}
 
 		let topIndex = 0, topSize = Math.floor(Math.random() * 2), //随机获取0或1
@@ -185,7 +185,7 @@ class Gallery extends React.Component {
 	 */
 	center(index) {
 		return function(){
-			this.randomPosition(index);
+			this.allocationPosition(index);
 		}.bind(this);
 	}
 	render() {
