@@ -51,3 +51,11 @@
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
+/**
+ * 去掉处理移动端点击出现背景效果
+ */
+@media screen and (max-width: 768px){ 
+	.gallery-figure{
+		cursor: default;
+	}
+}
