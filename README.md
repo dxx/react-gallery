@@ -1,6 +1,7 @@
 ## Description
 
 This is a gallery application written by react.<br>
+
 It uses create-react-app to build.
 
 Online preview address [https://code-mcx.github.io/react-gallery](https://code-mcx.github.io/react-gallery).
